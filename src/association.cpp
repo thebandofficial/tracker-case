@@ -45,8 +45,8 @@ void Associator::match_detections(const Frame& frame, std::vector<bool>& detecti
       if (detection_used[d]) {
         continue;
       }
-      const double score = iou(tracks_[t].box, frame.detections[d].box);
-      if (score >= best_score) {
+      const double score = iou(tracks_[t].predicted(), frame.detections[d].box);
+      if (score > best_score) {
         best_score = score;
         best_detection = d;
       }
@@ -55,7 +55,10 @@ void Associator::match_detections(const Frame& frame, std::vector<bool>& detecti
       continue;
     }
     Track& track = tracks_[t];
-    track.box = frame.detections[best_detection].box;
+    const Box& matched = frame.detections[best_detection].box;
+    track.vx = matched.x - track.box.x;
+    track.vy = matched.y - track.box.y;
+    track.box = matched;
     track.last_seen_ns = frame.timestamp_ns;
     track.misses = 0;
     detection_used[best_detection] = true;

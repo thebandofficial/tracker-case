@@ -78,5 +78,29 @@ TEST_CASE("associator: two targets crossing at 30 Hz stay two tracks") {
   CHECK(associator.tracks().size() == 2);
 }
 
+TEST_CASE("associator: two targets crossing at 5 Hz keep their ids") {
+  Associator associator{Config{}};
+  std::uint64_t ms = 0;
+  associator.update(frame_at_ms(ms, {{0, 0, 60, 60}, {200, 20, 60, 60}}));
+  const int left_id = associator.tracks()[0].id;
+  const int right_id = associator.tracks()[1].id;
+  for (double step = 30; step <= 210; step += 30) {
+    ms += 200;
+    associator.update(frame_at_ms(ms, {{step, 0, 60, 60}, {200 - step, 20, 60, 60}}));
+  }
+  REQUIRE(associator.tracks().size() == 2);
+  for (const Track& track : associator.tracks()) {
+    if (track.id == left_id) CHECK(track.box.x == 210);
+    if (track.id == right_id) CHECK(track.box.x == -10);
+  }
+}
+
+TEST_CASE("associator: match exactly at threshold is rejected") {
+  Associator associator{Config{0.5, 3}};
+  associator.update(frame_at_ms(0, {{0, 0, 4, 4}}));
+  associator.update(frame_at_ms(33, {{0, 0, 4, 2}}));
+  CHECK(associator.tracks().size() == 2);
+}
+
 }
 }
