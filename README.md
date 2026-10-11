@@ -42,16 +42,14 @@ with a C++17 compiler and CMake 3.16+.
    left alone on purpose, and one thing in this repo you had to look up or
    still do not understand.
 6. Read [`clocks-excerpt.md`](clocks-excerpt.md), a page from a library
-   you may not know. In `doc.md`, answer from that page only, and say where
-   the page stops: how does it define running-time in terms of the pipeline
-   clock, and what does it say about how a sink decides a buffer is late?
+   you may not know. Nothing to hand in; we ask about it in the interview.
 
 ## Rules
 
 - Time box: 3–4 hours. Stop when you hit it and say so in `notes.md`.
 - AI tools are allowed. Say in `notes.md` what they wrote.
 - Clone, do not fork. Do not publish your work or comment on the issue or PR.
-- Put `review.md`, `pr.md`, `reply.md`, `notes.md` and `doc.md` at the repo
-  root and commit them on `main` after the fix.
+- Put `review.md`, `pr.md`, `reply.md` and `notes.md` at the repo root and
+  commit them on `main` after the fix.
 - Send back a tarball of your clone with your commits. Where and by when is
   in your invite email.
