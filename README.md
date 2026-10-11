@@ -1,7 +1,8 @@
 # Tracker association: take-home
 
 You own [issue #1](https://github.com/thebandofficial/tracker-case/issues/1).
-Everything you need is in this repo, issue #1 and
+Everything you need is in this repo, issues #1 and
+[#3](https://github.com/thebandofficial/tracker-case/issues/3), and
 [PR #2](https://github.com/thebandofficial/tracker-case/pull/2).
 Nothing here is real project code or a real client.
 
@@ -25,6 +26,8 @@ with a C++17 compiler and CMake 3.16+.
   Check it out with `git fetch origin pull/2/head:pr-2`.
 - [The comment on issue #1](https://github.com/thebandofficial/tracker-case/issues/1#issuecomment-6109420639):
   the partner who reported it.
+- [Issue #3](https://github.com/thebandofficial/tracker-case/issues/3): the
+  system design task.
 - Code: [`include/tracker/association.hpp`](include/tracker/association.hpp),
   [`src/association.cpp`](src/association.cpp),
   [`tests/association_test.cpp`](tests/association_test.cpp).
@@ -43,13 +46,16 @@ with a C++17 compiler and CMake 3.16+.
    still do not understand.
 6. Read [`clocks-excerpt.md`](clocks-excerpt.md), a page from a library
    you may not know. Nothing to hand in; we ask about it in the interview.
+7. Design the system in
+   [issue #3](https://github.com/thebandofficial/tracker-case/issues/3) and
+   pick its architecture. We discuss your drawing in the interview.
 
 ## Rules
 
 - Time box: 3–4 hours. Stop when you hit it and say so in `notes.md`.
 - AI tools are allowed. Say in `notes.md` what they wrote.
-- Clone, do not fork. Do not publish your work or comment on the issue or PR.
-- Put `review.md`, `pr.md`, `reply.md` and `notes.md` at the repo root and
-  commit them on `main` after the fix.
+- Clone, do not fork. Do not publish your work or comment on the issues or PR.
+- Put `review.md`, `pr.md`, `reply.md`, `notes.md` and `arch.md` or
+  `arch.png` at the repo root and commit them on `main` after the fix.
 - Send back a tarball of your clone with your commits. Where and by when is
   in your invite email.
