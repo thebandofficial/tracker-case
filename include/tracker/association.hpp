@@ -26,13 +26,16 @@ struct Track {
   Box box;
   std::uint64_t last_seen_ns;
   int misses;
+  double vx = 0.0;
+  double vy = 0.0;
 
   bool coasting() const { return misses > 0; }
+  Box predicted() const { return Box{box.x + vx, box.y + vy, box.w, box.h}; }
 };
 
 struct Config {
   double iou_threshold = 0.3;
-  int max_misses = 5;
+  int max_misses = 3;
 };
 
 double iou(const Box& a, const Box& b);
