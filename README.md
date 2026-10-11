@@ -1,6 +1,8 @@
 # Tracker association: take-home
 
-You own issue #1. Everything you need is in this repo, issue #1 and PR #2.
+You own [issue #1](https://github.com/thebandofficial/tracker-case/issues/1).
+Everything you need is in this repo, issue #1 and
+[PR #2](https://github.com/thebandofficial/tracker-case/pull/2).
 Nothing here is real project code or a real client.
 
 ## Build and test
@@ -9,18 +11,23 @@ Nothing here is real project code or a real client.
 ./scripts/test.sh
 ```
 
-Needs Docker. Builds in a container and runs the suite. Without Docker:
+[`scripts/test.sh`](scripts/test.sh) needs Docker. Builds in a container and runs the suite. Without Docker:
 `cmake -S . -B build && cmake --build build && ./build/association_test`
 with a C++17 compiler and CMake 3.16+.
 
 ## Read first
 
-- `domain.md`: what a frame, detection, track and box are here.
-- Issue #1: the bug and its acceptance lines.
-- PR #2: an earlier attempt at this ticket, written by a coding agent. Its
-  tests are green. Check it out
-  with `git fetch origin pull/2/head:pr-2`.
-- The comment on issue #1: the partner who reported it.
+- [`domain.md`](domain.md): what a frame, detection, track and box are here.
+- [Issue #1](https://github.com/thebandofficial/tracker-case/issues/1): the
+  bug and its acceptance lines.
+- [PR #2](https://github.com/thebandofficial/tracker-case/pull/2): an earlier
+  attempt at this ticket, written by a coding agent. Its tests are green.
+  Check it out with `git fetch origin pull/2/head:pr-2`.
+- [The comment on issue #1](https://github.com/thebandofficial/tracker-case/issues/1#issuecomment-6109420639):
+  the partner who reported it.
+- Code: [`include/tracker/association.hpp`](include/tracker/association.hpp),
+  [`src/association.cpp`](src/association.cpp),
+  [`tests/association_test.cpp`](tests/association_test.cpp).
 
 ## Tasks
 
