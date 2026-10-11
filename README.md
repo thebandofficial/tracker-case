@@ -19,7 +19,7 @@ with a C++17 compiler and CMake 3.16+.
 - Issue #1: the bug and its acceptance lines.
 - PR #2: an earlier attempt at this ticket. Its tests are green. Check it out
   with `git fetch origin pull/2/head:pr-2`.
-- `client-thread.md`: the partner who reported it.
+- The comment on issue #1: the partner who reported it.
 
 ## Tasks
 
@@ -29,7 +29,7 @@ with a C++17 compiler and CMake 3.16+.
 2. Fix #1 on `main`. Prove it with a test that fails before your fix and
    passes after. Commit the test and the fix separately.
 3. PR description in `pr.md`, under 15 lines.
-4. Reply to `client-thread.md` in `reply.md`. One email.
+4. Reply to the partner thread on issue #1 in `reply.md`. One email.
 5. `notes.md`, one paragraph: what you would do with another day, what you
    left alone on purpose, and one thing in this repo you had to look up or
    still do not understand.
