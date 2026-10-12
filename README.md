@@ -1,13 +1,15 @@
 # Tracker association: take-home
 
-This repo is a small C++ object tracker and a hiring take-home. A detector
+[This repo](https://github.com/thebandofficial/tracker-case) is a small C++
+object tracker and a hiring take-home. A detector
 finds boxes in each camera frame. The tracker links those boxes from frame
 to frame and gives each object an ID that stays the same over time. Nothing
 here is real project code or a real client.
 
 There is a bug: two objects that cross can swap IDs. It is
 [issue #1](https://github.com/thebandofficial/tracker-case/issues/1), and you
-own it. Everything you need is in this repo, issues #1 and
+own it. Everything you need is in this repo, issues
+[#1](https://github.com/thebandofficial/tracker-case/issues/1) and
 [#3](https://github.com/thebandofficial/tracker-case/issues/3), and
 [PR #2](https://github.com/thebandofficial/tracker-case/pull/2).
 
@@ -17,8 +19,12 @@ own it. Everything you need is in this repo, issues #1 and
 ./scripts/test.sh
 ```
 
-[`scripts/test.sh`](scripts/test.sh) needs Docker. It builds in a container
-and runs the tests. Without Docker you need a C++17 compiler and CMake 3.16+:
+[`scripts/test.sh`](scripts/test.sh) needs
+[Docker](https://docs.docker.com/get-started/get-docker/). It builds the
+[`Dockerfile`](Dockerfile) image and runs the
+[tests](tests/association_test.cpp) in it. Without Docker you need a C++17
+compiler and [CMake](https://cmake.org/download/) 3.16+, which reads
+[`CMakeLists.txt`](CMakeLists.txt):
 `cmake -S . -B build && cmake --build build && ./build/association_test`
 
 ## Read first
@@ -44,9 +50,10 @@ and runs the tests. Without Docker you need a C++17 compiler and CMake 3.16+:
    against [issue #1](https://github.com/thebandofficial/tracker-case/issues/1).
    Write your line comments in `review.md`, not on GitHub. Say whether you
    would merge it, and why. If not, end `review.md` with the instruction you
-   would give the agent so its next attempt is mergeable.
+   would give [the agent](https://github.com/thebandofficial/tracker-case/pull/2)
+   so its next attempt is mergeable.
 2. Fix [issue #1](https://github.com/thebandofficial/tracker-case/issues/1)
-   on `main`. Add a test that fails before your fix and passes after. Commit
+   on [`main`](https://github.com/thebandofficial/tracker-case/tree/main). Add a test that fails before your fix and passes after. Commit
    the test and the fix separately.
 3. Write the PR description for your fix in `pr.md`, under 15 lines.
 4. Answer the
