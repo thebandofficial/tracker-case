@@ -40,14 +40,18 @@ and runs the tests. Without Docker you need a C++17 compiler and CMake 3.16+:
 
 ## Tasks
 
-1. Review PR #2 against issue #1. Write your line comments in `review.md`,
-   not on GitHub. Say whether you would merge it, and why. If not, end
-   `review.md` with the instruction you would give the agent so its next
-   attempt is mergeable.
-2. Fix issue #1 on `main`. Add a test that fails before your fix and passes
-   after. Commit the test and the fix separately.
+1. Review [PR #2](https://github.com/thebandofficial/tracker-case/pull/2)
+   against [issue #1](https://github.com/thebandofficial/tracker-case/issues/1).
+   Write your line comments in `review.md`, not on GitHub. Say whether you
+   would merge it, and why. If not, end `review.md` with the instruction you
+   would give the agent so its next attempt is mergeable.
+2. Fix [issue #1](https://github.com/thebandofficial/tracker-case/issues/1)
+   on `main`. Add a test that fails before your fix and passes after. Commit
+   the test and the fix separately.
 3. Write the PR description for your fix in `pr.md`, under 15 lines.
-4. Answer the partner's emails on issue #1 in `reply.md`. One email.
+4. Answer the
+   [partner's emails on issue #1](https://github.com/thebandofficial/tracker-case/issues/1#issuecomment-6109420639)
+   in `reply.md`. One email.
 5. Write `notes.md`, one paragraph: what you would do with another day, what
    you left alone on purpose, and one thing in this repo you had to look up
    or still do not understand.
@@ -62,7 +66,8 @@ and runs the tests. Without Docker you need a C++17 compiler and CMake 3.16+:
 - Time box: 3–4 hours. Stop when you hit it and say so in `notes.md`.
 - AI tools are allowed. Say in `notes.md` which parts they wrote.
 - Clone, do not fork. Do not publish your work, and do not comment on the
-  issues or the PR.
+  [issues](https://github.com/thebandofficial/tracker-case/issues) or the
+  [PR](https://github.com/thebandofficial/tracker-case/pull/2).
 - Put `review.md`, `pr.md`, `reply.md`, `notes.md` and `arch.md` or
   `arch.png` at the repo root. Commit them on `main` after the fix.
 - Send back a tarball of your clone with your commits. Where and by when is
